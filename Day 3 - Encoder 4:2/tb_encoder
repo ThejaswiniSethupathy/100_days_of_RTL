@@ -1,0 +1,26 @@
+`timescale 1ns / 1ps
+module tb_encoder;
+	reg [3:0] in;
+	wire [1:0] out;
+
+	Encoder uut (
+		.in(in), 
+		.out(out)
+	);
+
+	initial begin
+	
+    $monitor("Time = %0t, in = %b, out = %b", $time, in, out);
+	 
+    in = 4'b0001; #10;
+    in = 4'b0010; #10;
+    in = 4'b0100; #10;
+    in = 4'b1000; #10;
+    in = 4'b0000; #10;  // Default case
+    in = 4'b0011; #10; // Undefined input case
+    
+    $finish;
+    
+	 end
+	 
+endmodule
