@@ -1,0 +1,28 @@
+`timescale 1ns / 1ps
+module tb_mux41;
+	reg [3:0] in;
+	reg [1:0] sel;
+	wire out;
+
+	mux41 uut (
+		.in(in), 
+		.sel(sel), 
+		.out(out)
+	);
+
+	initial begin
+		 $monitor("Time = %0t | sel = %b | in = %b | out = %b", $time, sel, in, out);
+
+        in = 4'b1010; sel = 2'b00; #10; 
+        in = 4'b1010; sel = 2'b01; #10;
+        in = 4'b1010; sel = 2'b10; #10;
+        in = 4'b1010; sel = 2'b11; #10;
+
+        in = 4'b1100; sel = 2'b00; #10;
+        in = 4'b1100; sel = 2'b01; #10;
+        in = 4'b1100; sel = 2'b10; #10;
+        in = 4'b1100; sel = 2'b11; #10;
+
+        $finish;
+	end
+endmodule
