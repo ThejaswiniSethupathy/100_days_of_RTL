@@ -1,0 +1,11 @@
+module demux_1to4 (
+    input wire in,
+    input wire [1:0] sel,
+    output wire [3:0] out
+);
+    assign out = (sel == 2'b00) ? 4'b0001 :
+                (sel == 2'b01) ? 4'b0010 :
+                (sel == 2'b10) ? 4'b0100 :
+                4'b1000;
+  
+endmodule
