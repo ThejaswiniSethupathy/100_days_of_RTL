@@ -1,0 +1,25 @@
+module bidirbuf_tb;
+	reg cntrl;
+	wire a;
+	wire b;
+	reg tempa,tempb;
+
+	bidirbuf uut (
+		.a(a), 
+		.b(b), 
+		.cntrl(cntrl)
+	);
+
+	initial begin
+		tempa=1'b0;
+		tempb=1'b0;
+		cntrl=1'b0;
+		end
+
+		always #10 tempa=~tempa;
+		always #20 tempb=~tempb;
+		always #50 cntrl=~cntrl;
+		assign a=(cntrl==1)?tempb:1'bz;
+		assign b=(cntrl==0)?tempb:1'bz;
+
+endmodule
