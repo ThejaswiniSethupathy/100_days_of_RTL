@@ -1,0 +1,8 @@
+module bidirbuf(
+	inout a,b,
+	input cntrl
+	);
+	bufif1 (b,a,cntrl);
+	bufif0 (a,b,cntrl);
+
+endmodule
