@@ -29,3 +29,5 @@ Day 14 - 4-bit Up/Down counter
 Day 15 - D flipflop
 
 Day 16 - T Flipflop
+
+Day 17 - Jk Flip Flop
