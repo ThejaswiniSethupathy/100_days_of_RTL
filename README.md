@@ -27,3 +27,5 @@ Day 13 - D Latch
 Day 14 - 4-bit Up/Down counter
 
 Day 15 - D flipflop
+
+Day 16 - T Flipflop
