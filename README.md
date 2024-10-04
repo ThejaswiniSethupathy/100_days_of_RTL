@@ -33,3 +33,5 @@ Day 16 - T Flipflop
 Day 17 - Jk Flip Flop
 
 Day 18 - 4 bit Ring Counter
+
+Day 19 - Half Adder
