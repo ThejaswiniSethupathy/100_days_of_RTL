@@ -1,0 +1,35 @@
+module johnson_counter_tb;
+	reg clock;
+	reg reset;
+	wire [3:0] q;
+	johnson_counter uut (
+		.clock(clock), 
+		.reset(reset), 
+		.q(q)
+	);
+	always #5 clock = ~clock;
+	initial begin
+	   clock = 0;
+		reset = 1;
+		#10;
+		reset = 0;
+		#80;
+		reset = 1;
+		#10;
+		reset = 0;
+		#90;
+		$finish;
+	end  
+   initial begin
+   $monitor("output at each cycle = %b",q);
+   end	
+endmodule 
+
+    
+        
+    
+
+
+
+
+
