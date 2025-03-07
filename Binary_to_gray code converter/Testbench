@@ -1,0 +1,23 @@
+`timescale 1ns / 1ps
+
+module b2g_tb;
+	reg [3:0] a;
+	wire [3:0] y;
+	b2g uut (
+		.a(a), 
+		.y(y)
+	);
+	initial 
+	begin
+	   a = 0;  
+	   #100;
+		for(a=1;a<15;a=a+1)
+		begin
+		#50
+		$display("%b",a);
+		end
+		#50;
+		$finish;
+   end
+endmodule
+
