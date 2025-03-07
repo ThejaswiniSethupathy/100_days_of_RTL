@@ -37,3 +37,11 @@ Day 18 - 4 bit Ring Counter
 Day 19 - Half Adder
 
 Day 20 - Sequence detector
+
+Day 21 - 4 bit upcounter
+
+Day 22 - 4 bit downcounter
+
+Day 23 - Johnson counter
+
+Day 24 - Binary to gray code converter
